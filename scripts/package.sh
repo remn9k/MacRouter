@@ -66,5 +66,10 @@ cd "$REPO_DIR"
 rm -f "MacRouter-macOS.zip"
 zip -r9 "MacRouter-macOS.zip" "$APP_NAME"
 
+echo "Creating MacRouter.dmg disk image..."
+rm -f "MacRouter.dmg"
+hdiutil create -volname "MacRouter" -srcfolder "$APP_NAME" -ov -format UDZO "MacRouter.dmg" > /dev/null
+
 echo "✅ App bundle created successfully: $REPO_DIR/$APP_NAME"
 echo "✅ Release zip created: $REPO_DIR/MacRouter-macOS.zip"
+echo "✅ Release DMG created: $REPO_DIR/MacRouter.dmg"
