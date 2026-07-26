@@ -1,0 +1,17 @@
+# SwiftPM
+.build/
+.swiftpm/
+
+# macOS & OS Generated
+.DS_Store
+.Trashes
+*.swp
+*~
+
+# App Build Outputs
+MacRouter.app/
+MacRouter-macOS.zip
+/tmp/
+
+# Logs & Temp
+*.log
